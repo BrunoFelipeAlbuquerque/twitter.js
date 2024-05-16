@@ -6,8 +6,8 @@
 	"eslint.alwaysShowStatus": true,
 	"eslint.validate": ["typescript"],
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.organizeImports": false
+		"source.fixAll": "explicit",
+		"source.organizeImports": "never"
 	},
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",

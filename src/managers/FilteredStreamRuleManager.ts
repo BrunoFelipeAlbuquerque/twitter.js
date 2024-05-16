@@ -78,9 +78,8 @@ export class FilteredStreamRuleManager extends BaseManager<string, FilteredStrea
 			add: rules,
 		};
 		const requestData = new RequestData({ body });
-		const res: POSTTweetsSearchStreamRulesResponse = await this.client._api.tweets.search.stream.rules.post(
-			requestData,
-		);
+		const res: POSTTweetsSearchStreamRulesResponse =
+			await this.client._api.tweets.search.stream.rules.post(requestData);
 		return (
 			res.data?.reduce((createdRules, rawRule) => {
 				const rule = this._add(rawRule.id, rawRule);
@@ -136,9 +135,8 @@ export class FilteredStreamRuleManager extends BaseManager<string, FilteredStrea
 	 */
 	async #deleteRules(body: POSTTweetsSearchStreamRulesJSONBody): Promise<POSTTweetsSearchStreamRulesResponse> {
 		const requestData = new RequestData({ body });
-		const res: POSTTweetsSearchStreamRulesResponse = await this.client._api.tweets.search.stream.rules.post(
-			requestData,
-		);
+		const res: POSTTweetsSearchStreamRulesResponse =
+			await this.client._api.tweets.search.stream.rules.post(requestData);
 		return res;
 	}
 

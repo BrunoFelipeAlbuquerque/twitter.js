@@ -1,8 +1,8 @@
 {
 	"name": "twitter.js",
 	"version": "0.14.0",
-	"author": "Shubham Parihar <shubhamparihar391@gmail.com>",
-	"description": "An object-oriented Node.js and TypeScript library for interacting with Twitter API v2",
+	"author": "Bruno Albuquerque <bruno.felipe.albuquerque@gmail.com>",
+	"description": "Another fork of twitter.js",
 	"main": "./dist/index.js",
 	"types": "./dist/types/index.d.ts",
 	"scripts": {
@@ -10,7 +10,7 @@
 		"build:dev": "tsc -w",
 		"doc": "typedoc --json docs/typedoc-out.json src/index.ts && node scripts/DocsBuilder.mjs",
 		"test": "vitest",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"lint:check": "eslint . --ext .js,.ts",
 		"lint:fix": "eslint . --ext .js,.ts --fix",
 		"format:check": "prettier --check .",
@@ -19,27 +19,29 @@
 		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {
-		"@discordjs/collection": "^1.1.0",
-		"@sapphire/async-queue": "^1.5.0",
+		"@discordjs/collection": "^2.1.0",
+		"@sapphire/async-queue": "^1.5.2",
+		"@typescript-eslint/eslint-plugin": "^7.9.0",
+		"@typescript-eslint/parser": "^7.9.0",
 		"oauth-1.0a": "^2.2.6",
 		"twitter-types": "^0.26.0",
-		"undici": "^5.10.0"
+		"undici": "^6.16.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.1.2",
-		"@commitlint/config-angular": "^17.1.0",
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-angular": "^19.3.0",
 		"@discordjs/ts-docgen": "^0.4.1",
-		"@types/node": "^18.7.23",
-		"@typescript-eslint/eslint-plugin": "^5.38.1",
-		"@typescript-eslint/parser": "^5.38.1",
-		"eslint": "^8.24.0",
-		"eslint-config-prettier": "^8.5.0",
-		"husky": "^8.0.1",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1",
-		"typedoc": "^0.23.15",
-		"typescript": "^4.8.4",
-		"vitest": "^0.23.4"
+		"@types/node": "^20.12.12",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"git-cliff": "^2.2.2",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"typedoc": "^0.25.13",
+		"typescript": "^5.4.5",
+		"vitest": "^1.6.0"
 	},
 	"files": [
 		"/dist"
