@@ -1,5 +1,5 @@
 {
-	"name": "twitter.ts",
+	"name": "@brunoalbuquerque/twitter.ts",
 	"version": "0.1.0",
 	"author": "Bruno Albuquerque <bruno.felipe.albuquerque@gmail.com>",
 	"description": "Another fork of twitter.js",
